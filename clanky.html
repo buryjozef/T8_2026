@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Články a zhodnotenia jednotlivých ročníkov Tajchovej osmičky.">
+  <title>Články – Tajchová osmička</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ===== NAVIGÁCIA ===== -->
+<nav class="nav" role="navigation" aria-label="Hlavná navigácia">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="Tajchová osmička – domov">
+      <div class="nav-logo-mark">T8</div>
+      <div class="nav-logo-text">Tajchová osmička<span>Nová Baňa</span></div>
+    </a>
+    <ul class="nav-links" role="list">
+      <li><a href="index.html">Domov</a></li>
+      <li><a href="trasy.html">Trasy</a></li>
+      <li><a href="program.html">Program</a></li>
+      <li><a href="infoservis.html">Infoservis</a></li>
+      <li><a href="galeria.html">Galéria</a></li>
+      <li><a href="clanky.html" class="active">Články</a></li>
+      <li><a href="https://www.terminovka.sk" target="_blank" rel="noopener" class="btn btn-primary">Registrovať sa</a></li>
+    </ul>
+    <button class="nav-hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="nav-mobile" id="mobileNav" role="navigation" aria-label="Mobilná navigácia">
+  <a href="index.html">Domov</a>
+  <a href="trasy.html">Trasy</a>
+  <a href="program.html">Program</a>
+  <a href="infoservis.html">Infoservis</a>
+  <a href="galeria.html">Galéria</a>
+  <a href="clanky.html" class="active">Články</a>
+  <a href="https://www.terminovka.sk" target="_blank" rel="noopener" class="btn btn-primary">Registrovať sa</a>
+</div>
+
+<!-- ===== PAGE HERO ===== -->
+<header class="page-hero">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="index.html">Domov</a>
+      <span aria-hidden="true">›</span>
+      <span aria-current="page">Články</span>
+    </nav>
+    <h1>Články</h1>
+    <p>Zhodnotenia jednotlivých ročníkov Tajchovej osmičky – ako sa pretek vydaril, kto vyhral a komu ďakujeme.</p>
+  </div>
+</header>
+
+<!-- ===== ZOZNAM ČLÁNKOV ===== -->
+<section class="section" aria-labelledby="clanky-heading">
+  <div class="container">
+    <div class="section-header" data-reveal>
+      <h2 id="clanky-heading">Najnovšie články</h2>
+      <p>Po skončení každého ročníka tu nájdeš zhodnotenie podujatia.</p>
+    </div>
+
+    <div class="article-cards" data-reveal>
+
+      <article class="article-card">
+        <div class="article-card-image" style="background-image:url('assets/images/articles/13-rocnik-2025-cover.jpg')">Foto 2025</div>
+        <div class="article-card-body">
+          <div class="article-card-meta">6. september 2025 · XIII. ročník</div>
+          <h3>Ako dopadol XIII. ročník?</h3>
+          <p>Rekordná účasť, nové rekordy trate a poďakovanie partnerom aj dobrovoľníkom XIII. ročníka Tajchovej osmičky.</p>
+          <a href="clanok-13-rocnik-2025.html" class="btn btn-outline-dark">Čítať článok</a>
+        </div>
+      </article>
+
+      <!-- Ďalší článok pridaj skopírovaním vyššie uvedeného <article> bloku
+           a vytvorením novej stránky podľa vzoru clanok-13-rocnik-2025.html -->
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="container">
+    <p>© 2026 Tajchová osmička · Nová Baňa &nbsp;·&nbsp; Dobrovoľnícky projekt &nbsp;·&nbsp;
+      <a href="https://pages.github.com" target="_blank" rel="noopener">Hosted on GitHub Pages</a>
+    </p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

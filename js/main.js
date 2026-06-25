@@ -129,9 +129,53 @@ function initGalleryFilter() {
   });
 }
 
+/* --- Partners / sponsors (index.html, future partneri.html) --- */
+function renderLogoLink(className, placeholderClassName, item) {
+  const link = document.createElement('a');
+  link.className = className;
+  link.href = item.url;
+  link.target = '_blank';
+  link.rel = 'noopener';
+
+  const img = document.createElement('img');
+  img.src = item.logo;
+  img.alt = item.name;
+  img.onerror = () => {
+    img.remove();
+    const placeholder = document.createElement('span');
+    placeholder.className = placeholderClassName;
+    placeholder.textContent = item.name;
+    link.appendChild(placeholder);
+  };
+  link.appendChild(img);
+  return link;
+}
+
+function initPartners() {
+  if (typeof PARTNERS_CONFIG === 'undefined') return;
+
+  const sponsorMainEl = document.getElementById('sponsorMain');
+  if (sponsorMainEl) {
+    const sponsor = PARTNERS_CONFIG.mainSponsor;
+    if (PARTNERS_CONFIG.showMainSponsor && sponsor) {
+      sponsorMainEl.appendChild(renderLogoLink('sponsor-main', 'sponsor-main-placeholder', sponsor));
+    } else {
+      sponsorMainEl.hidden = true;
+    }
+  }
+
+  const partnersGridEl = document.getElementById('partnersGrid');
+  if (partnersGridEl) {
+    (PARTNERS_CONFIG.partners || []).forEach(partner => {
+      partnersGridEl.appendChild(renderLogoLink('partner-card', 'partner-card-placeholder', partner));
+    });
+  }
+}
+
 /* --- Init on DOM ready --- */
 document.addEventListener('DOMContentLoaded', () => {
   initLightbox();
   initYearFilter();
   initGalleryFilter();
+  initPartners();
 });
