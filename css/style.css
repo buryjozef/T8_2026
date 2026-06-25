@@ -1379,3 +1379,183 @@ ul { list-style: none; }
 @media (max-width: 600px) {
   .article-cards { grid-template-columns: 1fr; }
 }
+
+/* =========================================
+   PRICING & CATEGORIES (Program Page)
+   ========================================= */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+.pricing-card {
+  background: var(--c-white);
+  border: 1px solid var(--c-border);
+  border-radius: var(--r-lg);
+  padding: 2.25rem 2rem;
+  text-align: center;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.pricing-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+.pricing-card--highlighted {
+  border: 2px solid var(--c-orange);
+}
+.pricing-card-badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--c-orange);
+  color: var(--c-white);
+  padding: .25rem .75rem;
+  border-radius: 100px;
+  font-family: var(--font-h);
+  font-size: .75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+}
+.pricing-card h3 {
+  font-family: var(--font-h);
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--c-forest);
+  margin-bottom: .5rem;
+}
+.pricing-card .price {
+  font-family: var(--font-h);
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--c-orange);
+  margin: 1rem 0;
+}
+.pricing-card .price span {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--c-muted);
+}
+.pricing-card .period {
+  font-size: .85rem;
+  color: var(--c-muted);
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+.pricing-card-details {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+  text-align: left;
+  font-size: .9rem;
+  color: var(--c-text);
+  line-height: 1.8;
+}
+.pricing-card-details li {
+  margin-bottom: .5rem;
+  display: flex;
+  align-items: flex-start;
+  gap: .5rem;
+}
+.pricing-card-details svg {
+  width: 16px;
+  height: 16px;
+  color: var(--c-green);
+  flex-shrink: 0;
+  margin-top: .2rem;
+}
+
+/* Category tables & tables responsiveness */
+.table-wrapper {
+  overflow-x: auto;
+  border-radius: var(--r-lg);
+  border: 1px solid var(--c-border);
+  box-shadow: var(--shadow);
+  margin-top: 1.5rem;
+  background: var(--c-white);
+}
+.propozicie-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: .9rem;
+  text-align: left;
+}
+.propozicie-table th {
+  padding: .9rem 1.25rem;
+  background: var(--c-forest);
+  color: var(--c-white);
+  font-family: var(--font-h);
+  font-weight: 500;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  font-size: .8rem;
+  border-bottom: 2px solid var(--c-border);
+}
+.propozicie-table td {
+  padding: .9rem 1.25rem;
+  border-bottom: 1px solid var(--c-border);
+  color: var(--c-text);
+  vertical-align: middle;
+}
+.propozicie-table tr:last-child td {
+  border-bottom: none;
+}
+.propozicie-table tr:hover td {
+  background: var(--c-cream);
+}
+.cat-badge {
+  display: inline-block;
+  background: var(--c-cream);
+  color: var(--c-forest);
+  border: 1px solid var(--c-border);
+  padding: .15rem .45rem;
+  border-radius: 4px;
+  font-family: var(--font-h);
+  font-size: .8rem;
+  font-weight: 700;
+}
+
+/* Prizes box */
+.prize-box {
+  background: var(--c-white);
+  border: 1px solid var(--c-border);
+  border-radius: var(--r-lg);
+  box-shadow: var(--shadow);
+  padding: 2.5rem;
+  margin-top: 2rem;
+}
+.prize-cash-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+.prize-cash-item {
+  background: var(--c-cream);
+  border-radius: var(--r);
+  padding: 1.25rem 1rem;
+  text-align: center;
+  border: 1px solid var(--c-border);
+}
+.prize-cash-item .place {
+  font-family: var(--font-h);
+  font-size: .9rem;
+  font-weight: 700;
+  color: var(--c-muted);
+  text-transform: uppercase;
+  margin-bottom: .25rem;
+}
+.prize-cash-item .amount {
+  font-family: var(--font-h);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--c-orange);
+}
+

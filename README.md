@@ -83,6 +83,28 @@ The home page hero (`.hero` in `css/style.css`) renders a photo background with 
 - **File size**: aim for roughly 150–400 KB (compress with something like Squoosh, `jpegoptim`, or `cwebp`) since it loads above the fold on every page view.
 - **Format**: JPEG is fine and is what's currently used. WebP would shrink it further but would need a small markup change (`<picture>` with a JPEG fallback) to support older browsers — not done currently.
 
+## Inner-page banner photos (`.page-hero`)
+
+Every inner page (`trasy.html`, `program.html`, `infoservis.html`, `galeria.html`, `clanky.html`, each `clanok-*.html`) has a small `<header class="page-hero">` banner. Once a page has its own photo, it's styled the same way as the home hero (`.hero`): the photo with the same green gradient overlay on top. Each page has its own photo.
+
+`.page-hero` in `style.css` only defines a solid fallback gradient (no photo) — pages without a photo yet use that as-is:
+
+```css
+.page-hero {
+  background: linear-gradient(135deg, var(--c-forest) 0%, var(--c-green) 100%);
+}
+```
+
+Once a page has a photo, set the full `background` shorthand inline on that page's `<header>` (mirrors `.hero`'s pattern exactly, just inline since each page's image differs):
+
+```html
+<header class="page-hero" style="background: linear-gradient(to bottom, rgba(26,61,43,.88) 0%, rgba(26,61,43,.65) 55%, rgba(26,61,43,.92) 100%), url('assets/images/page-hero/trasy.jpg') center/cover no-repeat;">
+```
+
+**To add/replace a page's banner photo**: drop the file into `assets/images/page-hero/` and add (or update) that inline `style` attribute on the page's `<header class="page-hero">`, pointing at the file. Pages without a photo yet (currently `galeria.html`, `clanky.html`, `clanok-13-rocnik-2025.html`) just have `<header class="page-hero">` with no inline style — copy the pattern above once a photo is ready. Follow the same dimension/framing/file-size guidance as the home hero photo above, just scaled to a shorter banner (1920×600–800px is plenty).
+
+**To set/replace a page's banner photo**, drop the file into `assets/images/page-hero/` using the filename already referenced in that page's `style="--page-hero-img: ..."` attribute — no CSS changes needed. Until a file exists at that path, the page falls back to a solid forest-green background (same overlay gradient, no visible photo) — there is no broken-image flash. Follow the same dimension/framing/file-size guidance as the home hero photo above, just scaled to a shorter banner (the area is much shorter than a full-viewport hero, so a 1920×600–800px crop is plenty).
+
 ## Partners / sponsors section
 
 The home page "Partneri" section (between Galéria and Kontakt) is data-driven so sponsors can be updated each season without touching HTML.
