@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
 </head>
 <body>
 
@@ -25,7 +26,7 @@
       <li><a href="program.html">Program</a></li>
       <li><a href="infoservis.html" class="active">Infoservis</a></li>
       <li><a href="galeria.html">Galéria</a></li>
-      <li><a href="https://www.terminovka.sk" data-config-href="registration-url" target="_blank" rel="noopener" class="btn btn-primary">Registrovať sa</a></li>
+      <li><a href="program.html" data-config-href="registration-url" target="_blank" rel="noopener" class="btn btn-primary">Registrovať sa</a></li>
     </ul>
     <button class="nav-hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
       <span></span><span></span><span></span>
@@ -38,7 +39,7 @@
   <a href="program.html">Program</a>
   <a href="infoservis.html" class="active">Infoservis</a>
   <a href="galeria.html">Galéria</a>
-  <a href="https://www.terminovka.sk" data-config-href="registration-url" target="_blank" rel="noopener" class="btn btn-primary">Registrovať sa</a>
+  <a href="program.html" data-config-href="registration-url" target="_blank" rel="noopener" class="btn btn-primary">Registrovať sa</a>
 </div>
 
 <!-- ===== PAGE HERO ===== -->
@@ -58,11 +59,58 @@
 <section class="section" aria-labelledby="archiv-heading">
   <div class="container">
 
+    <!-- ===== ROČNÍK 2026 ===== -->
+    <section class="year-section" data-year="2026" aria-labelledby="y2026-heading">
+      <div class="year-section-header">
+        <div class="year-badge" id="y2026-heading">2026</div>
+        <div class="year-info">14. ročník · 5. september 2026 · Nová Baňa</div>
+      </div>
+      <div class="result-cards">
+
+        <div class="result-card" data-reveal>
+          <div class="result-card-header">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+            <h4>Výsledky</h4>
+          </div>
+          <div class="result-card-body">
+            <a href="https://my.raceresult.com/406466/results" target="_blank" rel="noopener" class="result-link">
+              Výsledky (raceresult.com)
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="result-card" data-reveal>
+          <div class="result-card-header">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            <h4>Dokumenty</h4>
+          </div>
+          <div class="result-card-body">
+            <a href="assets/downloads/propozicie/Tajchova-osmicka-2026-propozicie.pdf" target="_blank" class="result-link">
+              Propozície 2026 (PDF)
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="result-card" data-reveal>
+          <div class="result-card-header">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+            <h4>Správy a články</h4>
+          </div>
+          <div class="result-card-body">
+            <p style="color:var(--c-muted);font-size:.9rem;line-height:1.6;">Vyhodnotenie podujatia a fotogaléria budú zverejnené po skončení pretekov (<span data-config="race-date">5. septembra 2026</span>).</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
     <!-- ===== ROČNÍK 2025 ===== -->
     <section class="year-section" data-year="2025" aria-labelledby="y2025-heading">
       <div class="year-section-header">
         <div class="year-badge" id="y2025-heading">2025</div>
-        <div class="year-info">4. ročník · 6. september 2025 · Nová Baňa</div>
+        <div class="year-info">13. ročník · 6. september 2025 · Nová Baňa</div>
       </div>
       <div class="result-cards">
 
@@ -102,7 +150,7 @@
               Vyhodnotenie XIII. ročníka
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
             </a>
-            <a href="https://photos.google.com/share/AF1QipPagOXmxSFEib72OUK9ITsEI0PLeAINUHyoG39vITzM6rAFEuth2O4404qK8xrl5w?key=MmZLY09FamdYRndwSWRoZzJPaU1OeHFnS3dMU0R3" target="_blank" rel="noopener" class="result-link">
+            <a href="https://photos.app.goo.gl/Dn4uWBgpYHsC3zf68" target="_blank" rel="noopener" class="result-link">
               Galéria 2025
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
             </a>
@@ -118,7 +166,7 @@
 <!-- ===== FOOTER ===== -->
 <footer class="footer">
   <div class="container">
-    <p>© 2026 Tajchová osmička · Nová Baňa &nbsp;·&nbsp; Dobrovoľnícky projekt &nbsp;·&nbsp;
+    <p>© 2026 Tajchová osmička · Nová Baňa &nbsp;·&nbsp; <a href="https://zelenypes.sk/" target="_blank" rel="noopener">Webdesign: DigiStra s.r.o. - ZelenyPes.sk</a> &nbsp;·&nbsp;
       <a href="https://pages.github.com" target="_blank" rel="noopener">Hosted on GitHub Pages</a>
     </p>
   </div>

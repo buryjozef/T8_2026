@@ -67,32 +67,6 @@
   document.head.appendChild(style);
 })();
 
-/* --- Lightbox (galeria.html) --- */
-function initLightbox() {
-  const lb = document.getElementById('lightbox');
-  const lbImg = document.getElementById('lightboxImg');
-  const lbClose = document.getElementById('lightboxClose');
-  if (!lb) return;
-
-  document.querySelectorAll('.g-photo[data-src]').forEach(photo => {
-    photo.addEventListener('click', () => {
-      const src = photo.getAttribute('data-src');
-      lbImg.src = src;
-      lb.classList.add('open');
-      document.body.style.overflow = 'hidden';
-    });
-  });
-
-  function closeLB() {
-    lb.classList.remove('open');
-    document.body.style.overflow = '';
-    lbImg.src = '';
-  }
-  if (lbClose) lbClose.addEventListener('click', closeLB);
-  lb.addEventListener('click', e => { if (e.target === lb) closeLB(); });
-  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLB(); });
-}
-
 /* --- Year filter (infoservis.html) --- */
 function initYearFilter() {
   const tabs = document.querySelectorAll('.year-tab');
@@ -106,24 +80,6 @@ function initYearFilter() {
       tab.classList.add('active');
       sections.forEach(s => {
         s.style.display = (year === 'all' || s.getAttribute('data-year') === year) ? '' : 'none';
-      });
-    });
-  });
-}
-
-/* --- Gallery filter (galeria.html) --- */
-function initGalleryFilter() {
-  const btns = document.querySelectorAll('.filter-btn');
-  const photos = document.querySelectorAll('.g-photo');
-  if (!btns.length) return;
-
-  btns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const yr = btn.getAttribute('data-year');
-      btns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      photos.forEach(p => {
-        p.style.display = (yr === 'all' || p.getAttribute('data-year') === yr) ? '' : 'none';
       });
     });
   });
@@ -208,8 +164,6 @@ function initSiteConfig() {
 /* --- Init on DOM ready --- */
 document.addEventListener('DOMContentLoaded', () => {
   initSiteConfig();
-  initLightbox();
   initYearFilter();
-  initGalleryFilter();
   initPartners();
 });

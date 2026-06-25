@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
 </head>
 <body>
 
@@ -25,7 +26,7 @@
       <li><a href="program.html">Program</a></li>
       <li><a href="infoservis.html">Infoservis</a></li>
       <li><a href="galeria.html">Galéria</a></li>
-      <li><a href="https://www.terminovka.sk" data-config-href="registration-url" target="_blank" rel="noopener" class="btn btn-primary">Registrovať sa</a></li>
+      <li><a href="program.html" data-config-href="registration-url" target="_blank" rel="noopener" class="btn btn-primary">Registrovať sa</a></li>
     </ul>
     <button class="nav-hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
       <span></span><span></span><span></span>
@@ -38,7 +39,7 @@
   <a href="program.html">Program</a>
   <a href="infoservis.html">Infoservis</a>
   <a href="galeria.html">Galéria</a>
-  <a href="https://www.terminovka.sk" data-config-href="registration-url" target="_blank" rel="noopener" class="btn btn-primary">Registrovať sa</a>
+  <a href="program.html" data-config-href="registration-url" target="_blank" rel="noopener" class="btn btn-primary">Registrovať sa</a>
 </div>
 
 <!-- ===== PAGE HERO ===== -->
@@ -51,39 +52,17 @@
     </nav>
     <h1>Trasy preteku</h1>
     <p>Interaktívna mapa a popis všetkých trás. Kliknutím na trasu zobrazíš detail, GPX súbor stiahneš tlačidlom nižšie.</p>
+    <div class="page-hero-jumplinks">
+      <a href="#trasa-21" class="btn btn-outline btn-sm">21,33 km</a>
+      <a href="#trasa-8" class="btn btn-outline btn-sm">8 km</a>
+      <a href="#trasa-5" class="btn btn-outline btn-sm">5,52 km</a>
+      <a href="#mapa" class="btn btn-outline btn-sm">Interaktívna mapa</a>
+    </div>
   </div>
 </header>
 
-<!-- ===== MAPA ===== -->
-<section class="section" aria-labelledby="mapa-heading">
-  <div class="container">
-    <div class="section-header" data-reveal>
-      <h2 id="mapa-heading">Interaktívna mapa trás</h2>
-      <p>Chceš si trasy dopredu pozrieť, alebo si ich priamo vyskúšať? Všetky štartujú na cyklochodníku okolo jazera Tajch.</p>
-    </div>
-
-    <div class="map-iframe-wrapper" data-reveal>
-      <iframe
-        src="https://www.google.com/maps/d/embed?mid=1mOR71aq7PgAG56HkLxVFzHMjWe_5GT4&ehbc=2E312F"
-        title="Mapa trás Tajchovej osmičky – všetky trasy"
-        allowfullscreen
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade">
-      </iframe>
-    </div>
-
-    <div class="map-actions">
-      <a href="https://www.google.com/maps/d/viewer?mid=1mOR71aq7PgAG56HkLxVFzHMjWe_5GT4"
-         target="_blank" rel="noopener" class="btn btn-outline-dark btn-sm">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-        Otvoriť v Google Maps
-      </a>
-    </div>
-  </div>
-</section>
-
 <!-- ===== POPIS TRÁS ===== -->
-<section class="section section--cream" aria-labelledby="popis-heading">
+<section class="section" aria-labelledby="popis-heading">
   <div class="container">
     <div class="section-header" data-reveal>
       <h2 id="popis-heading">Popis trás</h2>
@@ -122,6 +101,10 @@
           </div>
           <p>Terén, trochu asfalt a hlavne veľa stúpaní (759 m) a klesaní (726 m). Štart na cyklochodníku, okolo jazera Tajch a potom smer Zvonička, Háj, Kostivrch, Fanadýb a znovu Tajch.</p>
           <p>Trasa začína vo výške cca 315 m n.m. V najvyššom bode sa dostaneš na cca 640 m n.m., znovu klesneš a opäť nastúpaš na cca 630 m. Trať je zvlnená, takže si užiješ stúpania aj klesania a samozrejme aj krátke rovinky. Na trase sú 3 občerstvovacie stanice.</p>
+          <div class="trail-elevation">
+            <span class="trail-elevation-label">Výškový profil trasy</span>
+            <img src="assets/images/trails/T8-vyskovy-profil-trasa-21km.jpg" alt="Výškový profil trasy 21,33 km">
+          </div>
           <div style="display:flex;gap:.75rem;flex-wrap:wrap;">
             <a href="assets/gpx/trasa-21km.gpx" download class="btn btn-outline-dark btn-sm">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
@@ -164,6 +147,10 @@
           </div>
           <p>Štart na cyklochodníku, okolo jazera Tajch a smer Ferjancov Rígel (1. občerstvovačka) – Štepnica – Fanadýb (2. občerstvovačka) a späť na cyklochodník Tajch.</p>
           <p>Trasa začína vo výške cca 315 m n.m., v najvyššom bode sa dostaneš na cca 551 m n.m. Povrch je kombinácia asfaltu a terénu. Na trase sú 2 občerstvovacie stanice.</p>
+          <div class="trail-elevation">
+            <span class="trail-elevation-label">Výškový profil trasy</span>
+            <img src="assets/images/trails/T8-vyskovy-profil-trasa-8km.jpg" alt="Výškový profil trasy 8 km">
+          </div>
           <div style="display:flex;gap:.75rem;flex-wrap:wrap;">
             <a href="assets/gpx/trasa-8km.gpx" download class="btn btn-outline-dark btn-sm">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
@@ -207,6 +194,10 @@
           </div>
           <p>Štart na cyklochodníku, okolo jazera Tajch a smer Kozákova dolina – rampa, smer Pelúchova cesta, Kolibská cesta – Štálanská zvonička a späť na cyklochodník Tajch.</p>
           <p>Trasa začína vo výške cca 315 m n.m., v najvyššom bode sa dostaneš na cca 414 m n.m. Povrch je kombinácia asfaltu a terénu. Krátka trasa je bez občerstvenia.</p>
+          <div class="trail-elevation">
+            <span class="trail-elevation-label">Výškový profil trasy</span>
+            <img src="assets/images/trails/T8-vyskovy-profil-trasa-5km.jpg" alt="Výškový profil trasy 5,52 km">
+          </div>
           <div style="display:flex;gap:.75rem;flex-wrap:wrap;">
             <a href="assets/gpx/trasa-5km.gpx" download class="btn btn-outline-dark btn-sm">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
@@ -257,10 +248,38 @@
   </div>
 </section>
 
+<!-- ===== MAPA ===== -->
+<section class="section section--cream" id="mapa" aria-labelledby="mapa-heading">
+  <div class="container">
+    <div class="section-header" data-reveal>
+      <h2 id="mapa-heading">Interaktívna mapa trás</h2>
+      <p>Chceš si trasy dopredu pozrieť, alebo si ich priamo vyskúšať? Všetky štartujú na cyklochodníku okolo jazera Tajch.</p>
+    </div>
+
+    <div class="map-iframe-wrapper" data-reveal>
+      <iframe
+        src="https://www.google.com/maps/d/embed?mid=1mOR71aq7PgAG56HkLxVFzHMjWe_5GT4&ehbc=2E312F"
+        title="Mapa trás Tajchovej osmičky – všetky trasy"
+        allowfullscreen
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+
+    <div class="map-actions">
+      <a href="https://www.google.com/maps/d/viewer?mid=1mOR71aq7PgAG56HkLxVFzHMjWe_5GT4"
+         target="_blank" rel="noopener" class="btn btn-outline-dark btn-sm">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        Otvoriť v Google Maps
+      </a>
+    </div>
+  </div>
+</section>
+
 <!-- ===== FOOTER ===== -->
 <footer class="footer">
   <div class="container">
-    <p>© 2026 Tajchová osmička · Nová Baňa &nbsp;·&nbsp; Dobrovoľnícky projekt &nbsp;·&nbsp;
+    <p>© 2026 Tajchová osmička · Nová Baňa &nbsp;·&nbsp; <a href="https://zelenypes.sk/" target="_blank" rel="noopener">Webdesign: DigiStra s.r.o. - ZelenyPes.sk</a> &nbsp;·&nbsp;
       <a href="https://pages.github.com" target="_blank" rel="noopener">Hosted on GitHub Pages</a>
     </p>
   </div>

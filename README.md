@@ -24,7 +24,7 @@ Opening the HTML files directly via `file://` mostly works too, but some feature
 | `trasy.html` | Route details — embedded Google My Maps, per-route description, GPX downloads |
 | `program.html` | Race-day schedule, downloadable propozície (rules) PDFs, important info |
 | `infoservis.html` | Past-years results/info, filterable by year (tabs) |
-| `galeria.html` | Full photo gallery, filterable by year (buttons), masonry layout, lightbox |
+| `galeria.html` | One cover card per race year, each linking out to that year's full external photo gallery |
 | `clanky.html` | List of post-race summary articles (teaser cards) |
 | `clanok-[rok].html` | One full article per race edition (e.g. `clanok-13-rocnik-2025.html`) |
 
@@ -36,13 +36,13 @@ All pages share the same nav, footer, `css/style.css`, and `js/main.js`.
 index.html, trasy.html, program.html, infoservis.html, galeria.html
 clanky.html, clanok-13-rocnik-2025.html, ...
 css/style.css        — single shared stylesheet (CSS custom properties, no preprocessor)
-js/main.js           — shared behavior (nav, scroll-reveal, lightbox, year filters, partners, site config)
+js/main.js           — shared behavior (nav, scroll-reveal, year filters, partners, site config)
 js/partners-data.js  — sponsor/partner data (see below)
 js/site-config.js    — yearly values: registration URL, edition number, race date (see below)
 assets/
   images/
     hero-bg.jpg       — home page hero background photo
-    gallery/          — photos for galeria.html
+    gallery/          — cover-202X.jpg per year for galeria.html's gallery cards (see below)
     partners/         — sponsor/partner logo files
     trails/           — route map header images (home + trasy.html cards)
     articles/         — cover/inline photos for clanky article pages
@@ -104,6 +104,25 @@ Once a page has a photo, set the full `background` shorthand inline on that page
 
 **To add/replace a page's banner photo**: drop the file into `assets/images/page-hero/` and add (or update) that inline `style` attribute on the page's `<header class="page-hero">`, pointing at the file. Pages without a photo yet (currently `galeria.html`, `clanky.html`, `clanok-13-rocnik-2025.html`) just have `<header class="page-hero">` with no inline style — copy the pattern above once a photo is ready. Follow the same dimension/framing/file-size guidance as the home hero photo above, just scaled to a shorter banner (1920×600–800px is plenty).
 
+## Gallery page (`galeria.html`)
+
+Photos themselves aren't hosted on this site — each race year has its full gallery hosted externally (currently Google Photos albums). `galeria.html` shows one card per year; each card is a single cover photo that links out to that year's full external album.
+
+```html
+<a href="https://photos.app.goo.gl/..." target="_blank" rel="noopener" class="gallery-year-card" style="background-image:url('assets/images/gallery/cover-2025.jpg')">
+  <span class="gallery-year-card-placeholder">Foto 2025</span>
+  <div class="gallery-year-card-overlay">
+    <span class="gallery-year-card-title">Galéria 2025</span>
+    <span class="gallery-year-card-cta">Zobraziť fotky →</span>
+  </div>
+</a>
+```
+
+- **Cover photo**: drop a file into `assets/images/gallery/` (e.g. `cover-2025.jpg`) and point that year's card's `background-image` at it. Until it's there, `.gallery-year-card-placeholder` shows muted text instead of a broken image.
+- **Adding a new year**: copy one `<a class="gallery-year-card">` block, update the `href` (external album link), cover photo path, and the two text spans.
+- **Hiding a year that doesn't have a gallery/cover photo yet** (e.g. before that year's race has happened): wrap the card in an HTML comment rather than deleting it — see the commented-out 2026 card in `galeria.html` for the pattern. Un-comment and fill in the real `href`/cover photo once the gallery exists.
+- The same per-year gallery links are also surfaced from the "Správy a články" card on the matching year's section in `infoservis.html` — keep both in sync if a link changes.
+
 ## Yearly site config (registration URL, edition, race date)
 
 A handful of values change every season and used to be hardcoded in many places (the registration link alone appeared 19 times across all pages). They now live in one file, `js/site-config.js`:
@@ -118,7 +137,7 @@ const SITE_CONFIG = {
 
 **To update for a new season**, edit just these three values in `js/site-config.js` — no other file needs to change. `initSiteConfig()` in `js/main.js` parses `raceDate` once and runs on every page load to fill in:
 
-- every `<a data-config-href="registration-url" href="...">` — the `href` is overwritten with `SITE_CONFIG.registrationUrl` (the existing `href` is just a fallback for no-JS/crawlers, keep it pointing somewhere reasonable)
+- every `<a data-config-href="registration-url" href="program.html">` — the `href` is overwritten with `SITE_CONFIG.registrationUrl`. The static `href="program.html"` in the markup is just a no-JS fallback and is **never meant to be updated** — only `SITE_CONFIG.registrationUrl` should change each season. Don't hardcode the actual registration URL into the `href` itself, even "just to be safe" — that reintroduces the exact problem this file exists to solve (one URL to update vs. 19 scattered copies).
 - every `<span data-config="edition">` — replaced with `SITE_CONFIG.edition`
 - every `<span data-config="year">` — replaced with the year parsed from `raceDate`
 - every `<span data-config="race-date">` — replaced with the full Slovak date, e.g. `5. septembra 2026` (derived from `raceDate`, via a Slovak month-name lookup table in `main.js`)
