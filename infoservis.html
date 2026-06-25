@@ -25,8 +25,7 @@
       <li><a href="program.html">Program</a></li>
       <li><a href="infoservis.html" class="active">Infoservis</a></li>
       <li><a href="galeria.html">Galéria</a></li>
-      <li><a href="clanky.html">Články</a></li>
-      <li><a href="https://www.terminovka.sk" target="_blank" rel="noopener" class="btn btn-primary">Registrovať sa</a></li>
+      <li><a href="https://www.terminovka.sk" data-config-href="registration-url" target="_blank" rel="noopener" class="btn btn-primary">Registrovať sa</a></li>
     </ul>
     <button class="nav-hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
       <span></span><span></span><span></span>
@@ -39,8 +38,7 @@
   <a href="program.html">Program</a>
   <a href="infoservis.html" class="active">Infoservis</a>
   <a href="galeria.html">Galéria</a>
-  <a href="clanky.html">Články</a>
-  <a href="https://www.terminovka.sk" target="_blank" rel="noopener" class="btn btn-primary">Registrovať sa</a>
+  <a href="https://www.terminovka.sk" data-config-href="registration-url" target="_blank" rel="noopener" class="btn btn-primary">Registrovať sa</a>
 </div>
 
 <!-- ===== PAGE HERO ===== -->
@@ -60,15 +58,6 @@
 <section class="section" aria-labelledby="archiv-heading">
   <div class="container">
 
-    <!-- Filter tabs -->
-    <div class="year-tabs" role="tablist" aria-label="Filter podľa ročníka">
-      <button class="year-tab active" data-year="all" role="tab" aria-selected="true">Všetky</button>
-      <button class="year-tab" data-year="2025" role="tab" aria-selected="false">2025</button>
-      <button class="year-tab" data-year="2024" role="tab" aria-selected="false">2024</button>
-      <button class="year-tab" data-year="2023" role="tab" aria-selected="false">2023</button>
-      <button class="year-tab" data-year="2022" role="tab" aria-selected="false">2022</button>
-    </div>
-
     <!-- ===== ROČNÍK 2025 ===== -->
     <section class="year-section" data-year="2025" aria-labelledby="y2025-heading">
       <div class="year-section-header">
@@ -83,16 +72,8 @@
             <h4>Výsledky</h4>
           </div>
           <div class="result-card-body">
-            <a href="#" class="result-link">
-              Výsledky – 21,30 km
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-            </a>
-            <a href="#" class="result-link">
-              Výsledky – 8 km
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-            </a>
-            <a href="#" class="result-link">
-              Výsledky – 5,52 km
+            <a href="assets/downloads/vysledky/vysledky_T8-2025.pdf" target="_blank" class="result-link">
+              Výsledková listina (PDF)
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
             </a>
           </div>
@@ -104,11 +85,7 @@
             <h4>Dokumenty</h4>
           </div>
           <div class="result-card-body">
-            <a href="assets/downloads/vysledky/vysledky-2025.pdf" target="_blank" class="result-link">
-              Výsledková listina (PDF)
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-            </a>
-            <a href="#" target="_blank" class="result-link">
+            <a href="assets/downloads/propozicie/Tajchova-osmicka-2025-propozicie.pdf" target="_blank" class="result-link">
               Propozície 2025 (PDF)
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             </a>
@@ -125,134 +102,13 @@
               Vyhodnotenie XIII. ročníka
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
             </a>
-            <a href="#" target="_blank" class="result-link">
-              Správa z preteku – novabana.sk
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-            </a>
-            <a href="#" target="_blank" class="result-link">
-              Fotogaléria 2025 – Zoneram
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-            </a>
-            <a href="#" target="_blank" class="result-link">
-              Video z preteku
+            <a href="https://photos.google.com/share/AF1QipPagOXmxSFEib72OUK9ITsEI0PLeAINUHyoG39vITzM6rAFEuth2O4404qK8xrl5w?key=MmZLY09FamdYRndwSWRoZzJPaU1OeHFnS3dMU0R3" target="_blank" rel="noopener" class="result-link">
+              Galéria 2025
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
             </a>
           </div>
         </div>
 
-      </div>
-    </section>
-
-    <!-- ===== ROČNÍK 2024 ===== -->
-    <section class="year-section" data-year="2024" aria-labelledby="y2024-heading">
-      <div class="year-section-header">
-        <div class="year-badge" id="y2024-heading">2024</div>
-        <div class="year-info">3. ročník · Nová Baňa</div>
-      </div>
-      <div class="result-cards">
-
-        <div class="result-card" data-reveal>
-          <div class="result-card-header">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
-            <h4>Výsledky</h4>
-          </div>
-          <div class="result-card-body">
-            <a href="#" class="result-link">Výsledky – 21,30 km
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-            </a>
-            <a href="#" class="result-link">Výsledky – 8 km
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-            </a>
-            <a href="#" class="result-link">Výsledky – 5,52 km
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-            </a>
-          </div>
-        </div>
-
-        <div class="result-card" data-reveal>
-          <div class="result-card-header">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-            <h4>Dokumenty</h4>
-          </div>
-          <div class="result-card-body">
-            <a href="#" target="_blank" class="result-link">Výsledková listina (PDF)
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-            </a>
-            <a href="#" target="_blank" class="result-link">Propozície 2024 (PDF)
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-            </a>
-          </div>
-        </div>
-
-        <div class="result-card" data-reveal>
-          <div class="result-card-header">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
-            <h4>Správy a články</h4>
-          </div>
-          <div class="result-card-body">
-            <a href="#" target="_blank" class="result-link">Správa z preteku – novabana.sk
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-            </a>
-            <a href="#" target="_blank" class="result-link">Fotogaléria 2024 – Zoneram
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-            </a>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ===== ROČNÍK 2023 ===== -->
-    <section class="year-section" data-year="2023" aria-labelledby="y2023-heading">
-      <div class="year-section-header">
-        <div class="year-badge" id="y2023-heading">2023</div>
-        <div class="year-info">2. ročník · Nová Baňa</div>
-      </div>
-      <div class="result-cards">
-        <div class="result-card" data-reveal>
-          <div class="result-card-header">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
-            <h4>Výsledky &amp; dokumenty</h4>
-          </div>
-          <div class="result-card-body">
-            <a href="#" class="result-link">Výsledky – 21,30 km
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-            </a>
-            <a href="#" class="result-link">Výsledky – 8 km
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-            </a>
-            <a href="#" target="_blank" class="result-link">Výsledková listina (PDF)
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-            </a>
-            <a href="#" target="_blank" class="result-link">Správa z preteku
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== ROČNÍK 2022 ===== -->
-    <section class="year-section" data-year="2022" aria-labelledby="y2022-heading">
-      <div class="year-section-header">
-        <div class="year-badge" id="y2022-heading">2022</div>
-        <div class="year-info">1. ročník · Nová Baňa</div>
-      </div>
-      <div class="result-cards">
-        <div class="result-card" data-reveal>
-          <div class="result-card-header">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
-            <h4>Výsledky &amp; dokumenty</h4>
-          </div>
-          <div class="result-card-body">
-            <a href="#" class="result-link">Výsledky – premiérový ročník
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-            </a>
-            <a href="#" target="_blank" class="result-link">Správa z preteku
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-            </a>
-          </div>
-        </div>
       </div>
     </section>
 
@@ -268,6 +124,7 @@
   </div>
 </footer>
 
+<script src="js/site-config.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

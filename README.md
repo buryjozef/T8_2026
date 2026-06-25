@@ -36,8 +36,9 @@ All pages share the same nav, footer, `css/style.css`, and `js/main.js`.
 index.html, trasy.html, program.html, infoservis.html, galeria.html
 clanky.html, clanok-13-rocnik-2025.html, ...
 css/style.css        — single shared stylesheet (CSS custom properties, no preprocessor)
-js/main.js           — shared behavior (nav, scroll-reveal, lightbox, year filters, partners)
+js/main.js           — shared behavior (nav, scroll-reveal, lightbox, year filters, partners, site config)
 js/partners-data.js  — sponsor/partner data (see below)
+js/site-config.js    — yearly values: registration URL, edition number, race date (see below)
 assets/
   images/
     hero-bg.jpg       — home page hero background photo
@@ -103,7 +104,34 @@ Once a page has a photo, set the full `background` shorthand inline on that page
 
 **To add/replace a page's banner photo**: drop the file into `assets/images/page-hero/` and add (or update) that inline `style` attribute on the page's `<header class="page-hero">`, pointing at the file. Pages without a photo yet (currently `galeria.html`, `clanky.html`, `clanok-13-rocnik-2025.html`) just have `<header class="page-hero">` with no inline style — copy the pattern above once a photo is ready. Follow the same dimension/framing/file-size guidance as the home hero photo above, just scaled to a shorter banner (1920×600–800px is plenty).
 
-**To set/replace a page's banner photo**, drop the file into `assets/images/page-hero/` using the filename already referenced in that page's `style="--page-hero-img: ..."` attribute — no CSS changes needed. Until a file exists at that path, the page falls back to a solid forest-green background (same overlay gradient, no visible photo) — there is no broken-image flash. Follow the same dimension/framing/file-size guidance as the home hero photo above, just scaled to a shorter banner (the area is much shorter than a full-viewport hero, so a 1920×600–800px crop is plenty).
+## Yearly site config (registration URL, edition, race date)
+
+A handful of values change every season and used to be hardcoded in many places (the registration link alone appeared 19 times across all pages). They now live in one file, `js/site-config.js`:
+
+```js
+const SITE_CONFIG = {
+  edition: 14,                    // "14. ročník"
+  raceDate: '2026-09-05',          // ISO yyyy-mm-dd — single source of truth, day/month/year are derived from this
+  registrationUrl: 'https://my.raceresult.com/406466/registration?regname=Single%20Registration'
+};
+```
+
+**To update for a new season**, edit just these three values in `js/site-config.js` — no other file needs to change. `initSiteConfig()` in `js/main.js` parses `raceDate` once and runs on every page load to fill in:
+
+- every `<a data-config-href="registration-url" href="...">` — the `href` is overwritten with `SITE_CONFIG.registrationUrl` (the existing `href` is just a fallback for no-JS/crawlers, keep it pointing somewhere reasonable)
+- every `<span data-config="edition">` — replaced with `SITE_CONFIG.edition`
+- every `<span data-config="year">` — replaced with the year parsed from `raceDate`
+- every `<span data-config="race-date">` — replaced with the full Slovak date, e.g. `5. septembra 2026` (derived from `raceDate`, via a Slovak month-name lookup table in `main.js`)
+- every `<span data-config="race-day">` — replaced with just the day number, e.g. `5`
+- every `<span data-config="race-month-abbr">` — replaced with the Slovak month abbreviation, e.g. `Sep`
+
+Deriving day/month/year/full-date all from the single `raceDate` field (instead of separate hardcoded strings) means they can never drift out of sync with each other — e.g. the homepage's "upcoming race" date box (day number + month abbreviation in separate spans) used to be hardcoded independently of the rest of the date and would silently go stale; now both come from the same source.
+
+**What this does *not* cover**: `<title>` and `<meta name="description">` tags. Search engines and social-media link previews read those directly from the HTML source before any JavaScript runs, so a JS substitution wouldn't reach them. There are only a handful of these (`index.html`'s meta description, and `program.html`'s `<title>` + meta description) — update those by hand each season; search for the current year across the `.html` files to find them.
+
+**What's intentionally NOT templated**: `program.html`'s detailed schedule, payment deadlines, and prize amounts are genuinely new content each year (not a simple year-number swap), so they stay hand-written — only the simple "this is edition N / this is the date" mentions are wired to `SITE_CONFIG`.
+
+**Adding a new templated spot**: wrap just the variable part in a `<span data-config="edition|year|race-date|race-day|race-month-abbr">...</span>` (keep correct fallback text inside, in case JS fails to load), or add `data-config-href="registration-url"` to a link's `<a>` tag.
 
 ## Partners / sponsors section
 
@@ -135,8 +163,8 @@ Each race edition gets a post-race summary article, replacing the PDF "vyhodnote
   2. Replace the `<title>`, breadcrumb, `<h1>`, meta row (date/author), and all body content.
   3. Add real photos to `assets/images/articles/` and point the placeholder `style="background-image:url(...)"` at them.
   4. Add a new `.article-card` to `clanky.html` linking to the new file (copy the existing card block — the comment above it marks where).
-  5. Optionally add a link to it from the relevant year's "Správy a články" card in `infoservis.html` (see the 2025 section for an example).
-- The "Články" nav link must be added to **every** page's desktop (`.nav-links`) and mobile (`.nav-mobile`) navigation if a brand-new top-level page is ever added — copy the pattern already used for `clanky.html` across all 7 pages.
+  5. Link to it from the relevant year's "Správy a články" card in `infoservis.html` (see the 2025 section for an example).
+- **No top-level nav entry**: `clanky.html` and each `clanok-*.html` are intentionally **not** in the main nav (`.nav-links` / `.nav-mobile`) on any page. They're reached only via the "Správy a články" card on `infoservis.html` (which links to both the latest article and to `clanky.html` itself) and via cross-links between article pages. Don't add a "Články" nav item back without checking with the user first — it was removed on purpose.
 
 ## Deployment
 

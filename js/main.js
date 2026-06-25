@@ -172,8 +172,42 @@ function initPartners() {
   }
 }
 
+/* --- Site config (registration URL, edition, race date) --- */
+const SK_MONTHS_GENITIVE = ['januára', 'februára', 'marca', 'apríla', 'mája', 'júna', 'júla', 'augusta', 'septembra', 'októbra', 'novembra', 'decembra'];
+const SK_MONTHS_ABBR = ['Jan', 'Feb', 'Mar', 'Apr', 'Máj', 'Jún', 'Júl', 'Aug', 'Sep', 'Okt', 'Nov', 'Dec'];
+
+function initSiteConfig() {
+  if (typeof SITE_CONFIG === 'undefined') return;
+
+  const raceDate = new Date(SITE_CONFIG.raceDate + 'T00:00:00');
+  const day = raceDate.getDate();
+  const month = raceDate.getMonth();
+  const year = raceDate.getFullYear();
+  const raceDateDisplay = `${day}. ${SK_MONTHS_GENITIVE[month]} ${year}`;
+
+  document.querySelectorAll('[data-config-href="registration-url"]').forEach(el => {
+    el.href = SITE_CONFIG.registrationUrl;
+  });
+  document.querySelectorAll('[data-config="edition"]').forEach(el => {
+    el.textContent = SITE_CONFIG.edition;
+  });
+  document.querySelectorAll('[data-config="year"]').forEach(el => {
+    el.textContent = year;
+  });
+  document.querySelectorAll('[data-config="race-date"]').forEach(el => {
+    el.textContent = raceDateDisplay;
+  });
+  document.querySelectorAll('[data-config="race-day"]').forEach(el => {
+    el.textContent = day;
+  });
+  document.querySelectorAll('[data-config="race-month-abbr"]').forEach(el => {
+    el.textContent = SK_MONTHS_ABBR[month];
+  });
+}
+
 /* --- Init on DOM ready --- */
 document.addEventListener('DOMContentLoaded', () => {
+  initSiteConfig();
   initLightbox();
   initYearFilter();
   initGalleryFilter();

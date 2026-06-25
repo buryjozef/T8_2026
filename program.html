@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Program 5. ročníka Tajchovej osmičky – 5. 9. 2026, Nová Baňa. Harmonogram dňa, propozície, registrácia.">
+  <meta name="description" content="Program 14. ročníka Tajchovej osmičky – 5. 9. 2026, Nová Baňa. Harmonogram dňa, propozície, registrácia.">
   <title>Program – Tajchová osmička 2026</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,8 +25,7 @@
       <li><a href="program.html" class="active">Program</a></li>
       <li><a href="infoservis.html">Infoservis</a></li>
       <li><a href="galeria.html">Galéria</a></li>
-      <li><a href="clanky.html">Články</a></li>
-      <li><a href="https://www.terminovka.sk" target="_blank" rel="noopener" class="btn btn-primary">Registrovať sa</a></li>
+      <li><a href="https://www.terminovka.sk" data-config-href="registration-url" target="_blank" rel="noopener" class="btn btn-primary">Registrovať sa</a></li>
     </ul>
     <button class="nav-hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
       <span></span><span></span><span></span>
@@ -39,8 +38,7 @@
   <a href="program.html" class="active">Program</a>
   <a href="infoservis.html">Infoservis</a>
   <a href="galeria.html">Galéria</a>
-  <a href="clanky.html">Články</a>
-  <a href="https://www.terminovka.sk" target="_blank" rel="noopener" class="btn btn-primary">Registrovať sa</a>
+  <a href="https://www.terminovka.sk" data-config-href="registration-url" target="_blank" rel="noopener" class="btn btn-primary">Registrovať sa</a>
 </div>
 
 <!-- ===== PAGE HERO ===== -->
@@ -51,8 +49,8 @@
       <span aria-hidden="true">›</span>
       <span aria-current="page">Program</span>
     </nav>
-    <h1>Program a propozície 2026</h1>
-    <p>5. ročník Tajchovej osmičky · sobota 5. septembra 2026 · Nová Baňa</p>
+    <h1>Program a propozície <span data-config="year">2026</span></h1>
+    <p><span data-config="edition">14</span>. ročník Tajchovej osmičky · sobota <span data-config="race-date">5. septembra 2026</span> · Nová Baňa</p>
   </div>
 </header>
 
@@ -62,13 +60,13 @@
     <div class="program-header-box" data-reveal>
       <div class="program-poster" aria-label="Plagát preteku">
         <!-- Nahraď reálnym plagátom: <img src="assets/images/plagat-2026.jpg" alt="Plagát Tajchová osmička 2026"> -->
-        <span>Plagát 2026</span>
+        <span>Plagát <span data-config="year">2026</span></span>
       </div>
       <div class="program-info">
-        <h2 id="program-info-heading">5. ročník Tajchovej osmičky</h2>
+        <h2 id="program-info-heading"><span data-config="edition">14</span>. ročník Tajchovej osmičky</h2>
         <p>Tradičné bežecké podujatie v krásnej prírode v okolí jazera Tajch a priľahlých lesoch Novej Bane. Ponúka tri súťažné trate (21,33 km · 8 km · 5,52 km), nesúťažný beh pre verejnosť a kompletné detské preteky.</p>
         <p style="line-height: 1.8;">
-          <strong>Dátum:</strong> sobota 5. septembra 2026<br>
+          <strong>Dátum:</strong> sobota <span data-config="race-date">5. septembra 2026</span><br>
           <strong>Miesto konania:</strong> rekreačná oblasť Tajch, Nová Baňa<br>
           <span style="font-size: 0.9rem; color: var(--c-muted); padding-left: 1rem; display: block; line-height: 1.6; margin: 0.25rem 0 0.5rem 0;">
             • Registrácia a vyhodnotenie: <strong>amfiteáter Tajch</strong><br>
@@ -78,8 +76,8 @@
           <strong>Organizátori:</strong> Mesto Nová Baňa, Zvonička, o.z. a nadšenci behu
         </p>
         <div class="program-cta" style="margin-top: 1.5rem;">
-          <a href="https://www.terminovka.sk" target="_blank" rel="noopener" class="btn btn-primary">Registrovať sa</a>
-          <a href="assets/downloads/propozicie-2026.pdf" target="_blank" class="btn btn-outline-dark">
+          <a href="https://www.terminovka.sk" data-config-href="registration-url" target="_blank" rel="noopener" class="btn btn-primary">Registrovať sa</a>
+          <a href="assets/downloads/propozicie/Tajchova-osmicka-2026-propozicie.pdf" target="_blank" class="btn btn-outline-dark">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
             Propozície (PDF)
           </a>
@@ -94,7 +92,7 @@
   <div class="container">
     <div class="section-header" data-reveal>
       <h2 id="harmonogram-heading">Harmonogram dňa</h2>
-      <p>Program bežeckého dňa – sobota 5. septembra 2026</p>
+      <p>Program bežeckého dňa – sobota <span data-config="race-date">5. septembra 2026</span></p>
     </div>
     <div style="max-width:640px;margin:0 auto;" data-reveal>
       <div class="timeline" role="list">
@@ -148,7 +146,7 @@
   <div class="container">
     <div class="section-header" data-reveal>
       <h2 id="pricing-heading">Štartovné a registrácia</h2>
-      <p>Prehľad poplatkov pre rok 2026. Zaregistrujte sa vopred a získajte najvýhodnejšie štartovné.</p>
+      <p>Prehľad poplatkov pre rok <span data-config="year">2026</span>. Zaregistrujte sa vopred a získajte najvýhodnejšie štartovné.</p>
     </div>
     
     <div class="pricing-grid" data-reveal>
@@ -172,7 +170,7 @@
             Občerstvenie na trati a teplé jedlo v cieli
           </li>
         </ul>
-        <a href="https://www.terminovka.sk" target="_blank" rel="noopener" class="btn btn-primary btn-sm" style="margin-top:auto;">Registrovať sa online</a>
+        <a href="https://www.terminovka.sk" data-config-href="registration-url" target="_blank" rel="noopener" class="btn btn-primary btn-sm" style="margin-top:auto;">Registrovať sa online</a>
       </div>
 
       <!-- Neskorá online -->
@@ -194,7 +192,7 @@
             Občerstvenie na trati a teplé jedlo v cieli
           </li>
         </ul>
-        <a href="https://www.terminovka.sk" target="_blank" rel="noopener" class="btn btn-outline-dark btn-sm" style="margin-top:auto;">Registrovať sa online</a>
+        <a href="https://www.terminovka.sk" data-config-href="registration-url" target="_blank" rel="noopener" class="btn btn-outline-dark btn-sm" style="margin-top:auto;">Registrovať sa online</a>
       </div>
 
       <!-- Na mieste -->
@@ -262,7 +260,7 @@
   <div class="container">
     <div class="section-header" data-reveal>
       <h2 id="categories-heading">Oficiálne kategórie a trate</h2>
-      <p>Kompletný zoznam kategórií pre rok 2026 rozdelených podľa jednotlivých dĺžok bežeckých trás.</p>
+      <p>Kompletný zoznam kategórií pre rok <span data-config="year">2026</span> rozdelených podľa jednotlivých dĺžok bežeckých trás.</p>
     </div>
 
     <!-- 21,33 km -->
@@ -380,7 +378,7 @@
   <div class="container">
     <div class="section-header" data-reveal>
       <h2 id="prizes-heading">Ceny a ocenenia</h2>
-      <p>Prehľad ocenení a finančných odmien pre najlepších pretekárov Tajchovej osmičky 2026.</p>
+      <p>Prehľad ocenení a finančných odmien pre najlepších pretekárov Tajchovej osmičky <span data-config="year">2026</span>.</p>
     </div>
 
     <!-- Finančné odmeny -->
@@ -444,16 +442,16 @@
   <div class="container">
     <div class="section-header" data-reveal>
       <h2 id="download-heading">Na stiahnutie</h2>
-      <p>Kompletné propozície, oficiálne mapy trás a GPX navigácie pre preteky 2026.</p>
+      <p>Kompletné propozície, oficiálne mapy trás a GPX navigácie pre preteky <span data-config="year">2026</span>.</p>
     </div>
     <div class="downloads-grid" data-reveal>
 
-      <a href="assets/downloads/propozicie-2026.pdf" target="_blank" class="download-card">
+      <a href="assets/downloads/propozicie/Tajchova-osmicka-2026-propozicie.pdf" target="_blank" class="download-card">
         <div class="download-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
         </div>
         <div>
-          <h4>Propozície 2026</h4>
+          <h4>Propozície <span data-config="year">2026</span></h4>
           <p>Kompletné pravidlá, informácie, kontakty (PDF)</p>
         </div>
         <div class="btn btn-outline-dark btn-sm">PDF</div>
@@ -591,6 +589,7 @@
   </div>
 </footer>
 
+<script src="js/site-config.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

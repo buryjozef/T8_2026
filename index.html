@@ -25,8 +25,7 @@
       <li><a href="program.html">Program</a></li>
       <li><a href="infoservis.html">Infoservis</a></li>
       <li><a href="galeria.html">Galéria</a></li>
-      <li><a href="clanky.html">Články</a></li>
-      <li><a href="https://www.terminovka.sk" target="_blank" rel="noopener" class="btn btn-primary">Registrovať sa</a></li>
+      <li><a href="https://www.terminovka.sk" data-config-href="registration-url" target="_blank" rel="noopener" class="btn btn-primary">Registrovať sa</a></li>
     </ul>
     <button class="nav-hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
       <span></span><span></span><span></span>
@@ -39,17 +38,16 @@
   <a href="program.html">Program</a>
   <a href="infoservis.html">Infoservis</a>
   <a href="galeria.html">Galéria</a>
-  <a href="clanky.html">Články</a>
-  <a href="https://www.terminovka.sk" target="_blank" rel="noopener" class="btn btn-primary">Registrovať sa</a>
+  <a href="https://www.terminovka.sk" data-config-href="registration-url" target="_blank" rel="noopener" class="btn btn-primary">Registrovať sa</a>
 </div>
 
 <!-- ===== HERO ===== -->
 <header class="hero" role="banner">
-  <div class="hero-badge">5. ročník · Nová Baňa</div>
+  <div class="hero-badge"><span data-config="edition">14</span>. ročník · Nová Baňa</div>
   <h1>Tajchová<em>osmička</em></h1>
-  <p class="hero-subtitle">5. septembra 2026 &nbsp;·&nbsp; Nová Baňa</p>
+  <p class="hero-subtitle"><span data-config="race-date">5. septembra 2026</span> &nbsp;·&nbsp; Nová Baňa</p>
   <div class="hero-cta">
-    <a href="https://www.terminovka.sk" target="_blank" rel="noopener" class="btn btn-primary">Registrovať sa</a>
+    <a href="https://www.terminovka.sk" data-config-href="registration-url" target="_blank" rel="noopener" class="btn btn-primary">Registrovať sa</a>
     <a href="program.html" class="btn btn-outline">Program preteku</a>
   </div>
   <div class="hero-mountains" aria-hidden="true">
@@ -75,8 +73,8 @@
       <div class="stat-label">Prevýšenie (m)</div>
     </div>
     <div class="stat">
-      <div class="stat-value">5.</div>
-      <div class="stat-label">Ročník 2026</div>
+      <div class="stat-value"><span data-config="edition">14</span>.</div>
+      <div class="stat-label">Ročník <span data-config="year">2026</span></div>
     </div>
   </div>
 </div>
@@ -187,16 +185,16 @@
   <div class="container">
     <div class="upcoming-box" data-reveal>
       <div>
-        <h2 id="upcoming-heading">5. ročník 2026</h2>
-        <p>Sobota 5. septembra 2026, Nová Baňa. Registrácia prebieha cez portál Terminovka.sk. Kapacita je obmedzená!</p>
+        <h2 id="upcoming-heading"><span data-config="edition">14</span>. ročník <span data-config="year">2026</span></h2>
+        <p>Sobota <span data-config="race-date">5. septembra 2026</span>, Nová Baňa. Registrácia prebieha online. Kapacita je obmedzená!</p>
         <div style="display:flex;gap:.75rem;flex-wrap:wrap;">
-          <a href="https://www.terminovka.sk" target="_blank" rel="noopener" class="btn btn-outline">Registrovať sa</a>
+          <a href="https://www.terminovka.sk" data-config-href="registration-url" target="_blank" rel="noopener" class="btn btn-outline">Registrovať sa</a>
           <a href="program.html" class="btn btn-outline">Program dňa</a>
         </div>
       </div>
       <div class="upcoming-date" aria-hidden="true">
-        <span class="day">5</span>
-        <span class="month-year">Sep · 2026</span>
+        <span class="day" data-config="race-day">5</span>
+        <span class="month-year"><span data-config="race-month-abbr">Sep</span> · <span data-config="year">2026</span></span>
       </div>
     </div>
   </div>
@@ -299,6 +297,7 @@
 </footer>
 
 <script src="js/partners-data.js"></script>
+<script src="js/site-config.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
