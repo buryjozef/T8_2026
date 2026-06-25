@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Fotogaléria Tajchovej osmičky – fotky z bežeckých pretekov v Novej Bani.">
+  <title>Galéria – Tajchová osmička</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ===== NAVIGÁCIA ===== -->
+<nav class="nav" role="navigation" aria-label="Hlavná navigácia">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="Tajchová osmička – domov">
+      <div class="nav-logo-mark">T8</div>
+      <div class="nav-logo-text">Tajchová osmička<span>Nová Baňa</span></div>
+    </a>
+    <ul class="nav-links" role="list">
+      <li><a href="index.html">Domov</a></li>
+      <li><a href="trasy.html">Trasy</a></li>
+      <li><a href="program.html">Program</a></li>
+      <li><a href="infoservis.html">Infoservis</a></li>
+      <li><a href="galeria.html" class="active">Galéria</a></li>
+      <li><a href="https://www.terminovka.sk" target="_blank" rel="noopener" class="btn btn-primary">Registrovať sa</a></li>
+    </ul>
+    <button class="nav-hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="nav-mobile" id="mobileNav" role="navigation" aria-label="Mobilná navigácia">
+  <a href="index.html">Domov</a>
+  <a href="trasy.html">Trasy</a>
+  <a href="program.html">Program</a>
+  <a href="infoservis.html">Infoservis</a>
+  <a href="galeria.html" class="active">Galéria</a>
+  <a href="https://www.terminovka.sk" target="_blank" rel="noopener" class="btn btn-primary">Registrovať sa</a>
+</div>
+
+<!-- ===== PAGE HERO ===== -->
+<header class="page-hero">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="index.html">Domov</a>
+      <span aria-hidden="true">›</span>
+      <span aria-current="page">Galéria</span>
+    </nav>
+    <h1>Fotogaléria</h1>
+    <p>Momenty z preteku zachytené fotografmi. Celé galérie sú dostupné na Zonerame.</p>
+  </div>
+</header>
+
+<!-- ===== GALÉRIA ===== -->
+<section class="section" aria-labelledby="galeria-heading">
+  <div class="container">
+
+    <!-- Filter -->
+    <div class="gallery-filter" role="group" aria-label="Filter podľa roku">
+      <button class="filter-btn active" data-year="all">Všetky</button>
+      <button class="filter-btn" data-year="2025">2025</button>
+      <button class="filter-btn" data-year="2024">2024</button>
+      <button class="filter-btn" data-year="2023">2023</button>
+      <button class="filter-btn" data-year="2022">2022</button>
+    </div>
+
+    <!-- Masonry grid -->
+    <!-- Nahraď placeholderové divy reálnymi fotkami:
+         <div class="g-photo" data-year="2025" data-src="assets/images/gallery/foto-2025-01.jpg">
+           <img src="assets/images/gallery/foto-2025-01.jpg" alt="...">
+           ...
+         </div>
+    -->
+    <div class="gallery-masonry" role="list" aria-label="Galéria fotografií">
+
+      <div class="g-photo" data-year="2025" role="listitem">
+        <div class="g-photo-placeholder" style="background:linear-gradient(135deg,#1A3D2B,#2D6A4F);aspect-ratio:3/4;">Foto 2025 · 1</div>
+        <div class="g-photo-overlay"><span class="g-photo-year">2025</span></div>
+      </div>
+
+      <div class="g-photo" data-year="2025" role="listitem">
+        <div class="g-photo-placeholder" style="background:linear-gradient(135deg,#1760A5,#0F4F80);aspect-ratio:4/3;">Foto 2025 · 2</div>
+        <div class="g-photo-overlay"><span class="g-photo-year">2025</span></div>
+      </div>
+
+      <div class="g-photo" data-year="2025" role="listitem">
+        <div class="g-photo-placeholder" style="background:linear-gradient(135deg,#E07B00,#B86200);aspect-ratio:1/1;">Foto 2025 · 3</div>
+        <div class="g-photo-overlay"><span class="g-photo-year">2025</span></div>
+      </div>
+
+      <div class="g-photo" data-year="2024" role="listitem">
+        <div class="g-photo-placeholder" style="background:linear-gradient(135deg,#52B788,#2D6A4F);aspect-ratio:4/3;">Foto 2024 · 1</div>
+        <div class="g-photo-overlay"><span class="g-photo-year">2024</span></div>
+      </div>
+
+      <div class="g-photo" data-year="2024" role="listitem">
+        <div class="g-photo-placeholder" style="background:linear-gradient(135deg,#7C3AED,#5B21B6);aspect-ratio:3/4;">Foto 2024 · 2</div>
+        <div class="g-photo-overlay"><span class="g-photo-year">2024</span></div>
+      </div>
+
+      <div class="g-photo" data-year="2025" role="listitem">
+        <div class="g-photo-placeholder" style="background:linear-gradient(135deg,#0F7EA6,#0A5E7E);aspect-ratio:16/9;">Foto 2025 · 4</div>
+        <div class="g-photo-overlay"><span class="g-photo-year">2025</span></div>
+      </div>
+
+      <div class="g-photo" data-year="2023" role="listitem">
+        <div class="g-photo-placeholder" style="background:linear-gradient(135deg,#B45309,#92400E);aspect-ratio:4/3;">Foto 2023 · 1</div>
+        <div class="g-photo-overlay"><span class="g-photo-year">2023</span></div>
+      </div>
+
+      <div class="g-photo" data-year="2024" role="listitem">
+        <div class="g-photo-placeholder" style="background:linear-gradient(135deg,#1A3D2B,#1760A5);aspect-ratio:1/1;">Foto 2024 · 3</div>
+        <div class="g-photo-overlay"><span class="g-photo-year">2024</span></div>
+      </div>
+
+      <div class="g-photo" data-year="2023" role="listitem">
+        <div class="g-photo-placeholder" style="background:linear-gradient(135deg,#2D6A4F,#1760A5);aspect-ratio:3/4;">Foto 2023 · 2</div>
+        <div class="g-photo-overlay"><span class="g-photo-year">2023</span></div>
+      </div>
+
+      <div class="g-photo" data-year="2022" role="listitem">
+        <div class="g-photo-placeholder" style="background:linear-gradient(135deg,#374151,#1F2937);aspect-ratio:4/3;">Foto 2022 · 1</div>
+        <div class="g-photo-overlay"><span class="g-photo-year">2022</span></div>
+      </div>
+
+      <div class="g-photo" data-year="2025" role="listitem">
+        <div class="g-photo-placeholder" style="background:linear-gradient(135deg,#E07B00,#1A3D2B);aspect-ratio:16/9;">Foto 2025 · 5</div>
+        <div class="g-photo-overlay"><span class="g-photo-year">2025</span></div>
+      </div>
+
+      <div class="g-photo" data-year="2022" role="listitem">
+        <div class="g-photo-placeholder" style="background:linear-gradient(135deg,#52B788,#0F7EA6);aspect-ratio:4/3;">Foto 2022 · 2</div>
+        <div class="g-photo-overlay"><span class="g-photo-year">2022</span></div>
+      </div>
+
+    </div>
+
+    <!-- Zoneram CTA -->
+    <div class="zoneram-cta" data-reveal>
+      <h3>Kompletné galérie na Zonerame</h3>
+      <p>Všetky fotky z jednotlivých ročníkov nájdeš v plnom rozlíšení na fotoserveri Zoneram. Fotky sú voľne dostupné a stiahnuteľné.</p>
+      <a href="https://www.zoneram.sk" target="_blank" rel="noopener" class="btn btn-outline">Prejsť na Zoneram</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== LIGHTBOX ===== -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Zobrazenie fotky">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Zatvoriť">✕</button>
+  <img class="lightbox-img" id="lightboxImg" src="" alt="Foto z Tajchovej osmičky">
+</div>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="container">
+    <p>© 2026 Tajchová osmička · Nová Baňa &nbsp;·&nbsp; Dobrovoľnícky projekt &nbsp;·&nbsp;
+      <a href="https://pages.github.com" target="_blank" rel="noopener">Hosted on GitHub Pages</a>
+    </p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

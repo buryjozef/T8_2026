@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="Tajchova-Osmicka-Placeholder"
+  xmlns="http://www.topografix.com/GPX/1/1"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+  <metadata>
+    <name>Tajchová osmička – Trasa 21,30 km (PLACEHOLDER)</name>
+    <desc>Toto je vzorový GPX súbor. Nahraď ho reálnym GPX z preteku.</desc>
+  </metadata>
+  <trk>
+    <name>Trasa 21,30 km</name>
+    <trkseg>
+      <trkpt lat="48.4308" lon="18.6394"><ele>292</ele></trkpt>
+      <trkpt lat="48.4340" lon="18.6355"><ele>312</ele></trkpt>
+      <trkpt lat="48.4385" lon="18.6310"><ele>358</ele></trkpt>
+      <trkpt lat="48.4440" lon="18.6268"><ele>418</ele></trkpt>
+      <trkpt lat="48.4505" lon="18.6240"><ele>482</ele></trkpt>
+      <trkpt lat="48.4565" lon="18.6195"><ele>548</ele></trkpt>
+      <trkpt lat="48.4620" lon="18.6155"><ele>601</ele></trkpt>
+      <trkpt lat="48.4658" lon="18.6230"><ele>578</ele></trkpt>
+      <trkpt lat="48.4672" lon="18.6335"><ele>595</ele></trkpt>
+      <trkpt lat="48.4655" lon="18.6430"><ele>612</ele></trkpt>
+      <trkpt lat="48.4635" lon="18.6530"><ele>558</ele></trkpt>
+      <trkpt lat="48.4590" lon="18.6615"><ele>492</ele></trkpt>
+      <trkpt lat="48.4530" lon="18.6680"><ele>428</ele></trkpt>
+      <trkpt lat="48.4470" lon="18.6730"><ele>388</ele></trkpt>
+      <trkpt lat="48.4415" lon="18.6720"><ele>358</ele></trkpt>
+      <trkpt lat="48.4368" lon="18.6690"><ele>336</ele></trkpt>
+      <trkpt lat="48.4325" lon="18.6645"><ele>318</ele></trkpt>
+      <trkpt lat="48.4300" lon="18.6580"><ele>305</ele></trkpt>
+      <trkpt lat="48.4290" lon="18.6510"><ele>298</ele></trkpt>
+      <trkpt lat="48.4295" lon="18.6450"><ele>294</ele></trkpt>
+      <trkpt lat="48.4305" lon="18.6415"><ele>291</ele></trkpt>
+      <trkpt lat="48.4308" lon="18.6394"><ele>292</ele></trkpt>
+    </trkseg>
+  </trk>
+</gpx>

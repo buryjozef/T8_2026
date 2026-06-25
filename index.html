@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Tajchová osmička – bežecký pretek v Novej Bani. 5. 9. 2026. Prihlás sa na pretek!">
+  <title>Tajchová osmička – Nová Baňa</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ===== NAVIGÁCIA ===== -->
+<nav class="nav" role="navigation" aria-label="Hlavná navigácia">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="Tajchová osmička – domov">
+      <div class="nav-logo-mark">T8</div>
+      <div class="nav-logo-text">Tajchová osmička<span>Nová Baňa</span></div>
+    </a>
+    <ul class="nav-links" role="list">
+      <li><a href="index.html" class="active">Domov</a></li>
+      <li><a href="trasy.html">Trasy</a></li>
+      <li><a href="program.html">Program</a></li>
+      <li><a href="infoservis.html">Infoservis</a></li>
+      <li><a href="galeria.html">Galéria</a></li>
+      <li><a href="https://www.terminovka.sk" target="_blank" rel="noopener" class="btn btn-primary">Registrovať sa</a></li>
+    </ul>
+    <button class="nav-hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="nav-mobile" id="mobileNav" role="navigation" aria-label="Mobilná navigácia">
+  <a href="index.html" class="active">Domov</a>
+  <a href="trasy.html">Trasy</a>
+  <a href="program.html">Program</a>
+  <a href="infoservis.html">Infoservis</a>
+  <a href="galeria.html">Galéria</a>
+  <a href="https://www.terminovka.sk" target="_blank" rel="noopener" class="btn btn-primary">Registrovať sa</a>
+</div>
+
+<!-- ===== HERO ===== -->
+<header class="hero" role="banner">
+  <div class="hero-badge">5. ročník · Nová Baňa</div>
+  <h1>Tajchová<em>osmička</em></h1>
+  <p class="hero-subtitle">5. septembra 2026 &nbsp;·&nbsp; Nová Baňa</p>
+  <div class="hero-cta">
+    <a href="https://www.terminovka.sk" target="_blank" rel="noopener" class="btn btn-primary">Registrovať sa</a>
+    <a href="program.html" class="btn btn-outline">Program preteku</a>
+  </div>
+  <div class="hero-mountains" aria-hidden="true">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none" fill="white">
+      <path d="M0,80 L0,55 L120,25 L240,48 L360,18 L480,42 L560,10 L640,35 L760,8 L880,38 L960,15 L1080,40 L1200,20 L1320,45 L1440,22 L1440,80 Z"/>
+    </svg>
+  </div>
+</header>
+
+<!-- ===== ŠTATISTIKY ===== -->
+<div class="stats-bar" role="region" aria-label="Štatistiky">
+  <div class="container">
+    <div class="stat">
+      <div class="stat-value">3</div>
+      <div class="stat-label">Trasy</div>
+    </div>
+    <div class="stat">
+      <div class="stat-value">21,33</div>
+      <div class="stat-label">Km najdlhšia</div>
+    </div>
+    <div class="stat">
+      <div class="stat-value">+759</div>
+      <div class="stat-label">Prevýšenie (m)</div>
+    </div>
+    <div class="stat">
+      <div class="stat-value">5.</div>
+      <div class="stat-label">Ročník 2026</div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== O PRETEKU ===== -->
+<section class="section" id="o-preteku" aria-labelledby="about-heading">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-text" data-reveal>
+        <h2 id="about-heading">O preteku</h2>
+        <p>Tajchová osmička je bežecký pretek v kopcoch a lesných chodníkoch v okolí Novej Bane. Trasa wiedie cez historické tajchy – umelé vodné nádrže, ktoré slúžili kedysi baníckemu priemyslu a dnes sú chránenou prírodnou pamiatkou.</p>
+        <p>Pretek je otvorený pre bežcov všetkých úrovní. Okrem dlhej polmaratónskej trate ponúkame aj kratšie trasy pre rekreačných bežcov a detské preteky pre tých najmladších. Dôraz kladieme na priateľskú atmosféru a pekný zážitok z behu v prírode.</p>
+        <p>Organizátorom je Mesto Nová Baňa v spolupráci s miestnymi dobrovoľníkmi a športovými klubmi.</p>
+        <a href="program.html" class="btn btn-outline-dark">Pozri program</a>
+      </div>
+      <div class="about-image" data-reveal>
+        <!-- Nahraď reálnou fotkou: <img src="assets/images/o-preteku.jpg" alt="Bežci na trase Tajchovej osmičky"> -->
+        <span>Foto z preteku</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TRASY ===== -->
+<section class="section section--cream" id="trasy" aria-labelledby="trasy-heading">
+  <div class="container">
+    <div class="section-header" data-reveal>
+      <h2 id="trasy-heading">Trasy</h2>
+      <p>Tri hlavné trasy pre rôzne úrovne – od rekreačných bežcov po skúsených trailistov.</p>
+    </div>
+    <div class="trail-cards">
+
+      <article class="trail-card" data-trail="21" data-reveal>
+        <div class="trail-card-accent"></div>
+        <div class="trail-card-body">
+          <h3>Polmaratón – 21,33 km</h3>
+          <div class="trail-meta">
+            <div class="trail-meta-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+              21,33 km
+            </div>
+            <div class="trail-meta-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+              +759 m
+            </div>
+          </div>
+          <p>Terén + asfalt. Okolo jazera Tajch, smer Zvonička, Háj, Kostivrch, Fanadýb a späť. Veľa stúpaní aj klesaní. 3 občerstvovacie stanice.</p>
+          <a href="trasy.html#trasa-21" class="btn btn-outline-dark">Detail trasy</a>
+        </div>
+      </article>
+
+      <article class="trail-card" data-trail="8" data-reveal>
+        <div class="trail-card-accent"></div>
+        <div class="trail-card-body">
+          <h3>Dlhá trasa – 8 km</h3>
+          <div class="trail-meta">
+            <div class="trail-meta-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+              8 km
+            </div>
+            <div class="trail-meta-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+              +245 m
+            </div>
+          </div>
+          <p>Asfalt + terén. Okolo jazera Tajch, smer Ferjancov Rígel – Štepnica – Fanadýb a späť. 2 občerstvovacie stanice.</p>
+          <a href="trasy.html#trasa-8" class="btn btn-outline-dark">Detail trasy</a>
+        </div>
+      </article>
+
+      <article class="trail-card" data-trail="5" data-reveal>
+        <div class="trail-card-accent"></div>
+        <div class="trail-card-body">
+          <h3>Krátka trasa – 5,52 km</h3>
+          <div class="trail-meta">
+            <div class="trail-meta-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+              5,52 km
+            </div>
+            <div class="trail-meta-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+              +137 m
+            </div>
+          </div>
+          <p>Asfalt + terén. Okolo jazera Tajch a smer Kozákova dolina – Štálanská zvonička a späť. Bez občerstvenia.</p>
+          <a href="trasy.html#trasa-5" class="btn btn-outline-dark">Detail trasy</a>
+        </div>
+      </article>
+
+    </div>
+    <p style="text-align:center;margin-top:1.5rem;color:var(--c-muted);font-size:.9rem;">
+      + Detské preteky (100 m – 1 200 m) &nbsp;·&nbsp; <a href="trasy.html#detske" style="color:var(--c-forest);font-weight:600;">Viac info</a>
+    </p>
+  </div>
+</section>
+
+<!-- ===== NAJBLIŽŠÍ ROČNÍK ===== -->
+<section class="section" id="registracia" aria-labelledby="upcoming-heading">
+  <div class="container">
+    <div class="upcoming-box" data-reveal>
+      <div>
+        <h2 id="upcoming-heading">5. ročník 2026</h2>
+        <p>Sobota 5. septembra 2026, Nová Baňa. Registrácia prebieha cez portál Terminovka.sk. Kapacita je obmedzená!</p>
+        <div style="display:flex;gap:.75rem;flex-wrap:wrap;">
+          <a href="https://www.terminovka.sk" target="_blank" rel="noopener" class="btn btn-outline">Registrovať sa</a>
+          <a href="program.html" class="btn btn-outline">Program dňa</a>
+        </div>
+      </div>
+      <div class="upcoming-date" aria-hidden="true">
+        <span class="day">5</span>
+        <span class="month-year">Sep · 2026</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== GALÉRIA TEASER ===== -->
+<section class="section section--cream" id="galeria" aria-labelledby="galeria-heading">
+  <div class="container">
+    <div class="section-header" data-reveal>
+      <h2 id="galeria-heading">Fotogaléria</h2>
+      <p>Momenty z predchádzajúcich ročníkov Tajchovej osmičky.</p>
+    </div>
+    <div class="gallery-grid-home" data-reveal>
+      <!-- Nahraď reálnymi fotkami — <img src="assets/images/gallery/foto-01.jpg" alt="..."> -->
+      <div class="g-item">
+        <div class="g-placeholder" style="background:linear-gradient(135deg,#1A3D2B,#2D6A4F)">Foto 2025</div>
+      </div>
+      <div class="g-item">
+        <div class="g-placeholder" style="background:linear-gradient(135deg,#1760A5,#0F4F80)">Foto 2025</div>
+      </div>
+      <div class="g-item">
+        <div class="g-placeholder" style="background:linear-gradient(135deg,#E07B00,#B86200)">Foto 2024</div>
+      </div>
+      <div class="g-item">
+        <div class="g-placeholder" style="background:linear-gradient(135deg,#52B788,#2D6A4F)">Foto 2024</div>
+      </div>
+      <div class="g-item">
+        <div class="g-placeholder" style="background:linear-gradient(135deg,#7C3AED,#5B21B6)">Foto 2023</div>
+      </div>
+    </div>
+    <div class="gallery-cta" data-reveal>
+      <a href="galeria.html" class="btn btn-outline-dark">Celá galéria</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== KONTAKT ===== -->
+<section class="section section--forest" id="kontakt" aria-labelledby="contact-heading">
+  <div class="container">
+    <div class="section-header" data-reveal>
+      <h2 id="contact-heading">Organizátori a kontakt</h2>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info" data-reveal>
+        <h3>Kontakt</h3>
+        <p>Ak máš otázky k preteku, registrácii alebo trasám, neváhaj nás kontaktovať.</p>
+        <div class="contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <span><a href="mailto:info@tajchovaosmicka.sk" style="color:var(--c-lime)">info@tajchovaosmicka.sk</a></span>
+        </div>
+        <div class="contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>Nová Baňa, Banskobystrický kraj</span>
+        </div>
+        <div class="contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          <span><a href="#" style="color:var(--c-lime)">Facebook stránka preteku</a></span>
+        </div>
+      </div>
+      <div class="partners" data-reveal>
+        <h3>Organizátori</h3>
+        <div class="partner-list">
+          <div class="partner-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            Mesto Nová Baňa
+          </div>
+          <div class="partner-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            Dobrovoľníci a miestne spolky
+          </div>
+          <div class="partner-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            Mestská polícia Nová Baňa
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="container">
+    <p>© 2026 Tajchová osmička · Nová Baňa &nbsp;·&nbsp; Dobrovoľnícky projekt &nbsp;·&nbsp;
+      <a href="https://pages.github.com" target="_blank" rel="noopener">Hosted on GitHub Pages</a>
+    </p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

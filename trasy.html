@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Trasy Tajchovej osmičky – interaktívna mapa a popis trás 21 km, 8 km, 5,52 km a detské preteky.">
+  <title>Trasy – Tajchová osmička</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ===== NAVIGÁCIA ===== -->
+<nav class="nav" role="navigation" aria-label="Hlavná navigácia">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="Tajchová osmička – domov">
+      <div class="nav-logo-mark">T8</div>
+      <div class="nav-logo-text">Tajchová osmička<span>Nová Baňa</span></div>
+    </a>
+    <ul class="nav-links" role="list">
+      <li><a href="index.html">Domov</a></li>
+      <li><a href="trasy.html" class="active">Trasy</a></li>
+      <li><a href="program.html">Program</a></li>
+      <li><a href="infoservis.html">Infoservis</a></li>
+      <li><a href="galeria.html">Galéria</a></li>
+      <li><a href="https://www.terminovka.sk" target="_blank" rel="noopener" class="btn btn-primary">Registrovať sa</a></li>
+    </ul>
+    <button class="nav-hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="nav-mobile" id="mobileNav" role="navigation" aria-label="Mobilná navigácia">
+  <a href="index.html">Domov</a>
+  <a href="trasy.html" class="active">Trasy</a>
+  <a href="program.html">Program</a>
+  <a href="infoservis.html">Infoservis</a>
+  <a href="galeria.html">Galéria</a>
+  <a href="https://www.terminovka.sk" target="_blank" rel="noopener" class="btn btn-primary">Registrovať sa</a>
+</div>
+
+<!-- ===== PAGE HERO ===== -->
+<header class="page-hero">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="index.html">Domov</a>
+      <span aria-hidden="true">›</span>
+      <span aria-current="page">Trasy</span>
+    </nav>
+    <h1>Trasy preteku</h1>
+    <p>Interaktívna mapa a popis všetkých trás. Kliknutím na trasu zobrazíš detail, GPX súbor stiahneš tlačidlom nižšie.</p>
+  </div>
+</header>
+
+<!-- ===== MAPA ===== -->
+<section class="section" aria-labelledby="mapa-heading">
+  <div class="container">
+    <div class="section-header" data-reveal>
+      <h2 id="mapa-heading">Interaktívna mapa trás</h2>
+      <p>Chceš si trasy dopredu pozrieť, alebo si ich priamo vyskúšať? Všetky štartujú na cyklochodníku okolo jazera Tajch.</p>
+    </div>
+
+    <div class="map-iframe-wrapper" data-reveal>
+      <iframe
+        src="https://www.google.com/maps/d/embed?mid=1mOR71aq7PgAG56HkLxVFzHMjWe_5GT4&ehbc=2E312F"
+        title="Mapa trás Tajchovej osmičky – všetky trasy"
+        allowfullscreen
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+
+    <div class="map-actions">
+      <a href="https://www.google.com/maps/d/viewer?mid=1mOR71aq7PgAG56HkLxVFzHMjWe_5GT4"
+         target="_blank" rel="noopener" class="btn btn-outline-dark btn-sm">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        Otvoriť v Google Maps
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== POPIS TRÁS ===== -->
+<section class="section section--cream" aria-labelledby="popis-heading">
+  <div class="container">
+    <div class="section-header" data-reveal>
+      <h2 id="popis-heading">Popis trás</h2>
+    </div>
+
+    <div class="trail-detail-cards">
+
+      <!-- 21 km -->
+      <article class="trail-detail-card" id="trasa-21" data-reveal>
+        <div class="accent-bar" aria-hidden="true"></div>
+        <div class="trail-detail-body">
+          <div class="trail-detail-header">
+            <div>
+              <h3>Polmaratónska horská trasa – 21,33 km</h3>
+              <div class="trail-tags">
+                <span class="tag">Náročná</span>
+                <span class="tag">Polmaratón</span>
+                <span class="tag">Terén + asfalt</span>
+                <span class="tag">3 občerstv. stanice</span>
+              </div>
+            </div>
+            <div class="trail-stats">
+              <div class="trail-stat-item">
+                <span class="trail-stat-value">21,33</span>
+                <span class="trail-stat-label">km</span>
+              </div>
+              <div class="trail-stat-item">
+                <span class="trail-stat-value">+759 m</span>
+                <span class="trail-stat-label">stúpanie</span>
+              </div>
+              <div class="trail-stat-item">
+                <span class="trail-stat-value">315–640</span>
+                <span class="trail-stat-label">m n.m.</span>
+              </div>
+            </div>
+          </div>
+          <p>Terén, trochu asfalt a hlavne veľa stúpaní (759 m) a klesaní (726 m). Štart na cyklochodníku, okolo jazera Tajch a potom smer Zvonička, Háj, Kostivrch, Fanadýb a znovu Tajch.</p>
+          <p>Trasa začína vo výške cca 315 m n.m. V najvyššom bode sa dostaneš na cca 640 m n.m., znovu klesneš a opäť nastúpaš na cca 630 m. Trať je zvlnená, takže si užiješ stúpania aj klesania a samozrejme aj krátke rovinky. Na trase sú 3 občerstvovacie stanice.</p>
+          <div style="display:flex;gap:.75rem;flex-wrap:wrap;">
+            <a href="assets/gpx/trasa-21km.gpx" download class="btn btn-outline-dark btn-sm">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Stiahnuť GPX
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 8 km -->
+      <article class="trail-detail-card" id="trasa-8" data-trail="8" data-reveal>
+        <div class="accent-bar" aria-hidden="true"></div>
+        <div class="trail-detail-body">
+          <div class="trail-detail-header">
+            <div>
+              <h3>Dlhá trasa – 8 km</h3>
+              <div class="trail-tags">
+                <span class="tag">Mierne náročná</span>
+                <span class="tag">Asfalt + terén</span>
+                <span class="tag">2 občerstv. stanice</span>
+              </div>
+            </div>
+            <div class="trail-stats">
+              <div class="trail-stat-item">
+                <span class="trail-stat-value">8</span>
+                <span class="trail-stat-label">km</span>
+              </div>
+              <div class="trail-stat-item">
+                <span class="trail-stat-value">+245 m</span>
+                <span class="trail-stat-label">stúpanie</span>
+              </div>
+              <div class="trail-stat-item">
+                <span class="trail-stat-value">315–551</span>
+                <span class="trail-stat-label">m n.m.</span>
+              </div>
+            </div>
+          </div>
+          <p>Štart na cyklochodníku, okolo jazera Tajch a smer Ferjancov Rígel (1. občerstvovačka) – Štepnica – Fanadýb (2. občerstvovačka) a späť na cyklochodník Tajch.</p>
+          <p>Trasa začína vo výške cca 315 m n.m., v najvyššom bode sa dostaneš na cca 551 m n.m. Povrch je kombinácia asfaltu a terénu. Na trase sú 2 občerstvovacie stanice.</p>
+          <div style="display:flex;gap:.75rem;flex-wrap:wrap;">
+            <a href="assets/gpx/trasa-8km.gpx" download class="btn btn-outline-dark btn-sm">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Stiahnuť GPX
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 5,52 km -->
+      <article class="trail-detail-card" id="trasa-5" data-trail="5" data-reveal>
+        <div class="accent-bar" aria-hidden="true"></div>
+        <div class="trail-detail-body">
+          <div class="trail-detail-header">
+            <div>
+              <h3>Krátka trasa – 5,52 km</h3>
+              <div class="trail-tags">
+                <span class="tag">Ľahšia</span>
+                <span class="tag">Asfalt + terén</span>
+                <span class="tag">Bez občerstvenia</span>
+                <span class="tag">Rodiny</span>
+              </div>
+            </div>
+            <div class="trail-stats">
+              <div class="trail-stat-item">
+                <span class="trail-stat-value">5,52</span>
+                <span class="trail-stat-label">km</span>
+              </div>
+              <div class="trail-stat-item">
+                <span class="trail-stat-value">+137 m</span>
+                <span class="trail-stat-label">stúpanie</span>
+              </div>
+              <div class="trail-stat-item">
+                <span class="trail-stat-value">315–414</span>
+                <span class="trail-stat-label">m n.m.</span>
+              </div>
+            </div>
+          </div>
+          <p>Štart na cyklochodníku, okolo jazera Tajch a smer Kozákova dolina – rampa, smer Pelúchova cesta, Kolibská cesta – Štálanská zvonička a späť na cyklochodník Tajch.</p>
+          <p>Trasa začína vo výške cca 315 m n.m., v najvyššom bode sa dostaneš na cca 414 m n.m. Povrch je kombinácia asfaltu a terénu. Krátka trasa je bez občerstvenia.</p>
+          <div style="display:flex;gap:.75rem;flex-wrap:wrap;">
+            <a href="assets/gpx/trasa-5km.gpx" download class="btn btn-outline-dark btn-sm">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Stiahnuť GPX
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Detské trate -->
+      <article class="trail-detail-card trail-card-kids" id="detske" data-trail="kid" data-reveal>
+        <div class="accent-bar" aria-hidden="true"></div>
+        <div class="trail-detail-body">
+          <div class="trail-detail-header">
+            <div>
+              <h3>Detské trate</h3>
+              <div class="trail-tags">
+                <span class="tag">Deti</span>
+                <span class="tag">100 m – 1 200 m</span>
+                <span class="tag">Zadarmo</span>
+              </div>
+            </div>
+          </div>
+          <p>Všetky mládežnícke kategórie vedú priamo po cyklochodníku okolo jazera Tajch. Každá veková skupina má svoju vzdialenosť, aby si deti mohli bezpečne zasúťažiť a zažiť radosť z pohybu v prírode.</p>
+          <table class="kids-table" aria-label="Detské trate podľa veku">
+            <thead>
+              <tr>
+                <th scope="col">Kategória</th>
+                <th scope="col">Vek</th>
+                <th scope="col">Vzdialenosť</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Mini bežci</td><td>3 – 5 rokov</td><td>100 m</td></tr>
+              <tr><td>Predškoláci</td><td>5 – 7 rokov</td><td>200 m</td></tr>
+              <tr><td>Mladší žiaci</td><td>7 – 10 rokov</td><td>500 m</td></tr>
+              <tr><td>Starší žiaci</td><td>10 – 14 rokov</td><td>1 200 m</td></tr>
+            </tbody>
+          </table>
+          <p style="margin-top:1rem;font-size:.85rem;color:var(--c-muted);">Štart detských pretekov prebieha v priebehu dňa – presný harmonogram nájdeš v <a href="program.html" style="color:var(--c-forest);font-weight:600;">programe preteku</a>. Detské trate nevyžadujú predregistráciu, stačí prísť v deň preteku.</p>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="container">
+    <p>© 2026 Tajchová osmička · Nová Baňa &nbsp;·&nbsp; Dobrovoľnícky projekt &nbsp;·&nbsp;
+      <a href="https://pages.github.com" target="_blank" rel="noopener">Hosted on GitHub Pages</a>
+    </p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
