@@ -17,6 +17,7 @@ const PARTNERS_CONFIG = {
     { name: 'Penzión Tajch Nová Baňa', logo: 'assets/images/partners/penzion-tajch-logo.jpg', url: 'http://www.penziontajch.sk/' },
     { name: 'Lekáreň AQUA Žarnovica', logo: 'assets/images/partners/logo_lekaren_aqua.jpg', url: 'https://www.vasalekaren.sk/lekaren/7075/lekaren-aqua-zarnovica-dolna-247-4' },
     { name: 'Sady Tekova', logo: 'assets/images/partners/logo_sady_tekova.jpg', url: 'https://www.sadytekova.sk/' },
-    { name: 'Šport Bar Brehy', logo: 'assets/images/partners/sport-bar-brehy-logo.png', url: 'https://www.facebook.com/SPORTBARBREHY' }
+    { name: 'Šport Bar Brehy', logo: 'assets/images/partners/sport-bar-brehy-logo.png', url: 'https://www.facebook.com/SPORTBARBREHY' },
+    { name: 'LTK Solutions, s.r.o.', logo: 'assets/images/partners/LTK-logo.png', url: 'https://ltk.solutions/' }
   ]
 };
